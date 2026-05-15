@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Chest Radiograph Interpretation: Common Findings and Patterns",
+    "abstract": "A comprehensive review of common findings on chest radiographs including consolidation, pleural effusion, pneumothorax, cardiomegaly, and pulmonary nodules.",
+    "source": "RadioGraphics 2023",
+    "doi": "10.1148/rg.2023220100",
+    "chunks": [
+      "Consolidation on chest radiograph appears as opacification of the lung parenchyma with air bronchograms. Common causes include pneumonia, pulmonary hemorrhage, and organizing pneumonia. Distribution pattern helps narrow the differential diagnosis.",
+      "Pleural effusion appears as blunting of the costophrenic angle on upright chest radiograph. Large effusions cause opacification of the hemithorax with mediastinal shift. Lateral decubitus views can confirm free-flowing fluid.",
+      "Pneumothorax is identified by the visceral pleural line with absence of lung markings peripherally. Tension pneumothorax shows mediastinal shift away from the affected side and requires emergent decompression.",
+      "Cardiomegaly is defined as cardiothoracic ratio exceeding 0.5 on PA chest radiograph. Common causes include congestive heart failure, valvular disease, and cardiomyopathy."
+    ]
+  },
+  {
+    "title": "CT Imaging of Pulmonary Embolism: Diagnostic Criteria and Pitfalls",
+    "abstract": "Review of CT pulmonary angiography findings in pulmonary embolism including direct and indirect signs, imaging pitfalls, and risk stratification.",
+    "source": "AJR Am J Roentgenol 2023",
+    "doi": "10.2214/AJR.23.29100",
+    "chunks": [
+      "Direct signs of pulmonary embolism on CTPA include intraluminal filling defects that partially or completely occlude the pulmonary arteries. The polo mint sign refers to a partial filling defect surrounded by contrast on axial images.",
+      "Indirect signs include wedge-shaped peripheral opacities (Hampton hump), mosaic attenuation pattern from oligemia, and right heart strain with RV/LV ratio greater than 1.0 indicating poor prognosis.",
+      "Common pitfalls in PE diagnosis include motion artifacts, beam hardening from SVC contrast, lymph nodes mimicking filling defects, and mucus plugging in airways adjacent to vessels."
+    ]
+  },
+  {
+    "title": "Brain MRI: Systematic Approach to Interpretation",
+    "abstract": "A systematic approach to brain MRI interpretation covering common pathologies including stroke, tumors, demyelination, and infection.",
+    "source": "Neuroradiology 2023",
+    "doi": "10.1007/s00234-023-03100",
+    "chunks": [
+      "Acute ischemic stroke shows restricted diffusion on DWI with corresponding low ADC values. The mismatch between DWI and FLAIR abnormalities can estimate the time of onset. Large vessel occlusion requires emergent intervention.",
+      "Brain tumors demonstrate variable signal characteristics on MRI. High-grade gliomas typically show irregular enhancement, central necrosis, and surrounding FLAIR signal abnormality. Metastases are often at the gray-white matter junction.",
+      "Multiple sclerosis plaques appear as periventricular, juxtacortical, infratentorial, or spinal cord T2/FLAIR hyperintense lesions. Dawson fingers are characteristic periventricular lesions oriented perpendicular to the ventricles."
+    ]
+  },
+  {
+    "title": "Abdominal CT: Emergency Radiology Findings",
+    "abstract": "Review of critical findings on abdominal CT in the emergency setting including appendicitis, bowel obstruction, and vascular emergencies.",
+    "source": "Emergency Radiology 2023",
+    "doi": "10.1007/s10140-023-02150",
+    "chunks": [
+      "Acute appendicitis on CT shows an enlarged appendix greater than 6mm with periappendiceal fat stranding. An appendicolith is seen in approximately 25% of cases. Complications include perforation with abscess formation.",
+      "Small bowel obstruction shows dilated proximal loops greater than 3cm with decompressed distal bowel. The transition point should be identified. Closed loop obstruction and strangulation require urgent surgical intervention.",
+      "Abdominal aortic aneurysm rupture shows a dilated aorta with periaortic or retroperitoneal hematoma. The crescent sign represents acute intramural hematoma and is a sign of impending rupture."
+    ]
+  },
+  {
+    "title": "Musculoskeletal MRI: Knee Joint Assessment",
+    "abstract": "Comprehensive review of knee MRI interpretation focusing on meniscal tears, ligament injuries, and cartilage abnormalities.",
+    "source": "Skeletal Radiology 2023",
+    "doi": "10.1007/s00256-023-04300",
+    "chunks": [
+      "Meniscal tears appear as linear high signal extending to the articular surface on at least two consecutive images. Common tear patterns include horizontal, vertical, radial, and complex tears. Bucket handle tears show the double PCL sign.",
+      "ACL tears show discontinuity of the ligament fibers, often with surrounding edema. Secondary signs include anterior tibial translation, bone bruise pattern at the lateral femoral condyle and posterolateral tibial plateau.",
+      "Articular cartilage damage is graded using the modified Outerbridge classification. Grade IV lesions show full-thickness cartilage loss with exposed subchondral bone. MRI is the preferred modality for noninvasive cartilage assessment."
+    ]
+  },
+  {
+    "title": "Mammography and Breast Imaging: BI-RADS Assessment",
+    "abstract": "Overview of BI-RADS categorization system for mammographic findings and management recommendations.",
+    "source": "Radiology 2023",
+    "doi": "10.1148/radiol.2023230500",
+    "chunks": [
+      "BI-RADS 0 indicates incomplete assessment requiring additional imaging. BI-RADS 1 is negative with no findings. BI-RADS 2 denotes benign findings such as calcified fibroadenomas, fat-containing lesions, or stable findings.",
+      "BI-RADS 4 is suspicious and subdivided into 4A (low suspicion, 2-10%), 4B (moderate suspicion, 10-50%), and 4C (high suspicion, 50-95%). Biopsy is recommended for all BI-RADS 4 assessments.",
+      "Architectural distortion on mammography is a significant finding that may represent invasive carcinoma, radial scar, or post-surgical change. Digital breast tomosynthesis improves detection of architectural distortion compared to 2D mammography."
+    ]
+  }
+]
