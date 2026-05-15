@@ -20,4 +20,4 @@ ENV PORT=8000
 EXPOSE ${PORT}
 
 # Run migrations then start server
-CMD alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port ${PORT} --workers 2
+CMD alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port ${PORT} --workers 1

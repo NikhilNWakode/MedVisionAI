@@ -29,9 +29,14 @@ cors_origins = ["http://localhost:3000"]
 if os.environ.get("FRONTEND_URL"):
     cors_origins.append(os.environ["FRONTEND_URL"])
 
+cors_regex = None
+if os.environ.get("FRONTEND_REGEX"):
+    cors_regex = os.environ["FRONTEND_REGEX"]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=cors_origins,
+    allow_origin_regex=cors_regex,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
