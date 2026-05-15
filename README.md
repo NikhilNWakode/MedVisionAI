@@ -214,6 +214,3 @@ Production config includes:
 - Restart policies
 - Persistent volumes for data
 
-## License
-
-MIT
