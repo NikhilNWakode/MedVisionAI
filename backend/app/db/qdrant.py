@@ -3,7 +3,10 @@ from qdrant_client.models import Distance, VectorParams
 
 from app.config import settings
 
-qdrant_client = QdrantClient(url=settings.QDRANT_URL)
+qdrant_client = QdrantClient(
+    url=settings.QDRANT_URL,
+    api_key=settings.QDRANT_API_KEY,
+)
 
 IMAGE_COLLECTION = "image_embeddings"
 TEXT_COLLECTION = "text_embeddings"

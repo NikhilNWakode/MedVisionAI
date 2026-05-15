@@ -4,6 +4,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     DATABASE_URL: str = "postgresql+asyncpg://medvision:medvision@localhost:5432/medvision"
     QDRANT_URL: str = "http://localhost:6333"
+    QDRANT_API_KEY: str | None = None
     REDIS_URL: str = "redis://localhost:6379/0"
     GROQ_API_KEY: str = ""
     JWT_SECRET: str = "change-me-in-production"

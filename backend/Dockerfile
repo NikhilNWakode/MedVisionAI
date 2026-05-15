@@ -15,4 +15,9 @@ RUN pip install --no-cache-dir --timeout 300 --retries 5 ".[dev]"
 
 COPY . .
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Railway uses PORT env var
+ENV PORT=8000
+EXPOSE ${PORT}
+
+# Run migrations then start server
+CMD alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port ${PORT} --workers 2
