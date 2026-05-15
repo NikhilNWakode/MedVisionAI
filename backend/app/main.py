@@ -57,3 +57,12 @@ app.include_router(chat_router, tags=["chat"])
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
+@app.post("/seed")
+async def seed_data():
+    """Seed literature data and rebuild BM25 index. Safe to call multiple times."""
+    from app.seed.load_nih import seed_literature
+    await seed_literature()
+    await rebuild_bm25_index()
+    return {"status": "ok", "message": "Literature seeded and BM25 index rebuilt"}
