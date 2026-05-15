@@ -61,6 +61,12 @@ export async function getImage(id: string) {
   return api.get(`/images/${id}`);
 }
 
+export function getImageFileUrl(id: string): string {
+  const token = typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  const base = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  return `${base}/images/${id}/file?token=${token || ""}`;
+}
+
 export async function generateReport(imageId: string, clinicalNotes?: string) {
   return api.post("/reports/generate", {
     image_id: imageId,

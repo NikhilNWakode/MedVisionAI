@@ -1,6 +1,8 @@
+import os
 import uuid
 
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, status
+from fastapi.responses import FileResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -64,6 +66,26 @@ async def get_image(
         thumbnail_path=record.thumbnail_path,
         created_at=record.created_at,
     )
+
+
+@router.get("/{image_id}/file")
+async def get_image_file(
+    image_id: uuid.UUID,
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    result = await db.execute(
+        select(MedicalImage).where(MedicalImage.id == image_id, MedicalImage.user_id == user.id)
+    )
+    record = result.scalar_one_or_none()
+    if not record:
+        raise HTTPException(status_code=404, detail="Image not found")
+
+    file_path = record.thumbnail_path or record.upload_path
+    if not file_path or not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="File not found on disk")
+
+    return FileResponse(file_path, filename=record.filename)
 
 
 @router.get("", response_model=ImageListResponse)
