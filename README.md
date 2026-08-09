@@ -1,8 +1,46 @@
 # MedVision AI
 
-**Multimodal AI-Powered Radiology Copilot for Clinical Decision Support**
+**An end-to-end multimodal AI system exploring hybrid RAG, medical vision, and grounded generation.**
+
+I built MedVisionAI to understand what it takes to turn an LLM-powered prototype into a complete AI product. It combines medical image understanding, hybrid retrieval, reranking, structured generation, and real-time interaction into a single system.
 
 A full-stack healthcare AI platform that assists radiologists with medical image analysis, structured report generation, and citation-grounded Q&A using hybrid Retrieval-Augmented Generation (RAG).
+
+**Why I built this:** I wanted to explore how multimodal models, retrieval, and LLMs could work together in a genuinely useful system rather than building another simple LLM wrapper.
+
+---
+
+## What I Built
+
+The interesting part of MedVisionAI isn't the individual technologies, but how they work together:
+
+- Built a hybrid retrieval pipeline combining BM25 and dense vector search
+- Implemented Reciprocal Rank Fusion to combine retrieval strategies
+- Added LLM-based reranking before generation
+- Used BiomedCLIP for medical image representations
+- Built real-time RAG chat over WebSockets
+- Designed structured LLM outputs for radiology reports
+- Integrated DICOM parsing and FHIR-compatible report export
+- Built the backend, frontend, data layer, authentication, caching, and deployment setup end-to-end
+
+---
+## Engineering Decisions
+
+### Why Hybrid Retrieval?
+
+Medical queries contain both semantic concepts and exact terminology. Dense retrieval helps capture semantic similarity, while BM25 handles exact medical terms and phrases. I combine both using Reciprocal Rank Fusion.
+
+### Why Rerank?
+
+Initial retrieval is optimized for recall. Instead of asking the LLM to reason over a large candidate set, I retrieve a larger candidate pool and use an LLM-based reranking step to select the most relevant context before generation.
+
+### Why Separate Storage?
+
+- PostgreSQL → transactional application data
+- Qdrant → vector similarity search
+- Redis → caching and frequently accessed data
+
+This keeps each system responsible for the workload it is designed for.
 
 ---
 
